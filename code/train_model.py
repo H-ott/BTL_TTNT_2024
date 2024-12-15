@@ -89,5 +89,5 @@ plt.title('Loss over epochs')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
-
+# In ra đồ thị
 plt.show()
