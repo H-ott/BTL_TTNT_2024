@@ -26,8 +26,9 @@ predictions = model.predict(img)
 emotion = np.argmax(predictions)
 plt.imshow(img[0])
 plt.axis('off')
-plt.show()
 # In ra hình ảnh sau khi đưa vào mô hình
+plt.show()
+# In ra ma trận hình ảnh
 print(img)
 # In ra cảm xúc dự đoán
 emotions_dict = {0: 'angry', 1: 'disgust', 2: 'fear', 3: 'happy', 4: 'sad', 5: 'surprise', 6: 'neutral'}
