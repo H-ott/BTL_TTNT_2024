@@ -11,11 +11,8 @@ model = Sequential()
 # Thêm lớp Conv2D và MaxPooling2D
 model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(48, 48, 3)))  # 48x48 hình ảnh RGB
 model.add(MaxPooling2D((2, 2)))
-
-# Thêm các lớp Conv2D và MaxPooling2D khác
 model.add(Conv2D(64, (3, 3), activation='relu'))
 model.add(MaxPooling2D((2, 2)))
-
 model.add(Conv2D(128, (3, 3), activation='relu'))
 model.add(MaxPooling2D((2, 2)))
 
@@ -40,12 +37,12 @@ train_datagen = ImageDataGenerator(rescale=1./255, rotation_range=20, zoom_range
 validation_datagen = ImageDataGenerator(rescale=1./255)
 
 # Đọc dữ liệu từ thư mục train và validation
-train_generator = train_datagen.flow_from_directory('..\tap_du_lieu\train',
+train_generator = train_datagen.flow_from_directory('Đường dẫn thư mục train', # /content/drive/MyDrive/BTL_AI/1/train
                                                    target_size=(48, 48),
                                                    batch_size=32,
                                                    class_mode='categorical')
 
-validation_generator = validation_datagen.flow_from_directory('..\tap_du_lieu\validation',
+validation_generator = validation_datagen.flow_from_directory('Đường dẫn thư mục validation', # /content/drive/MyDrive/BTL_AI/1/validation
                                                              target_size=(48, 48),
                                                              batch_size=32,
                                                              class_mode='categorical')
@@ -56,11 +53,11 @@ history = model.fit(train_generator,
                     validation_data=validation_generator)
 
 # Lưu mô hình đã huấn luyện
-model.save('..\mo_hinh_da_train\emotion_detection_model.h5')
+model.save('Tên và nơi lưu mô hình sau khi huấn luyện') # /content/drive/MyDrive/BTL_AI/1/emotion_detection_model.h5
 
 # Đánh giá mô hình trên tập kiểm tra (test set)
 test_datagen = ImageDataGenerator(rescale=1./255)
-test_generator = test_datagen.flow_from_directory('..\tap_du_lieu\test',
+test_generator = test_datagen.flow_from_directory('Đường dẫn đến thư mục test', # /content/drive/MyDrive/BTL_AI/1/test
                                                   target_size=(48, 48),
                                                   batch_size=32,
                                                   class_mode='categorical')
