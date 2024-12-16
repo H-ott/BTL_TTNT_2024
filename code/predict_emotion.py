@@ -9,7 +9,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 # Tải mô hình đã train
-model = load_model('..\mo_hinh_da_train\emotion_detection_model.h5')
+model = load_model('Đường dẫn đến mô hình đã TRAIN') # /content/drive/MyDrive/BTL_AI/1/emotion_detection_model.h5
 
 # Đường dẫn tới ảnh
 img_path = '..\image_test\Training_2913.jpg'
