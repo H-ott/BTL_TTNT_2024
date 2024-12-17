@@ -1,1 +1,1 @@
-Model nhận diện cảm xúc dùng tập dữ liệu FER2013 để Train, Validation, Test. Có độ chính xác trên 56%. Nếu chạy trên colab cần kết nối colab với drive! Link chạy thử trên colab: [Link](https://colab.research.google.com/drive/1LNNwKliFhpieT8BdTYxmjW4jce0cMLx1?usp=sharing)
+Model nhận diện cảm xúc dùng tập dữ liệu FER2013 để Train, Validation, Test. Có độ chính xác trên 56%. Nếu chạy trên colab cần kết nối colab với drive! Link chạy thử trên colab: [Link](https://colab.research.google.com/drive/1_dkGftjNge0uVyQZTz5J-xsRNoVtfmCJ?authuser=1)
